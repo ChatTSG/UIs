@@ -1,0 +1,41 @@
+// 
+// Messages layout
+// 
+
+.message-list {
+    flex-grow: 1;
+}
+
+.message-container {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message-footer {
+    flex-shrink: 0;
+    height: 11.625rem; // 186px
+    border-top: $border-width solid var(--#{$prefix}border-color);
+    background-color: var(--#{$prefix}secondary-bg);
+}
+
+.message-item {
+    padding: 1rem;
+
+    @include media-breakpoint-up(sm) {
+        padding: 2rem;
+    }
+}
+
+.message-item:not(:last-child) {
+    border-bottom: $border-width solid var(--#{$prefix}border-color);
+}
+
+.question-item {
+    border-bottom: $border-width solid var(--#{$prefix}border-color);
+    background-color: var(--#{$prefix}secondary-bg);
+}
+
+.message-content *:last-child {
+    margin-bottom: 0;
+}

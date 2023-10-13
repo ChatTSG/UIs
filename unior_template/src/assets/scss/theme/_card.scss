@@ -1,0 +1,89 @@
+// 
+// Cards
+// 
+
+.card {
+    --#{$prefix}card-box-shadow: #{$card-box-shadow};
+    box-shadow: var(--#{$prefix}card-box-shadow);
+}
+
+// Upgrade plan card (visible in the navigation)
+.card-upgrade {
+    background: linear-gradient(45deg, rgba($info, .1) 0%, transparent 40%);
+    user-select: none;
+    
+    .is-compact & {
+        display: none;
+    }
+}
+
+// Chat history card (visible in the sidebar)
+.card-history {
+    padding: .85rem;
+    border-radius: $border-radius-lg;
+    transition: all .25s ease;
+
+    &.active {
+        background-color: var(--#{$prefix}body-bg);
+        border: 2px solid $info;
+        box-shadow: 0 0 0 3px rgba($info, .25);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--#{$prefix}body-bg);
+        }        
+    }
+    
+    .card-history-descr {
+        font-size: $font-size-sm;
+        line-height: 1.25;
+    }
+}
+
+.card-search {
+    padding: .85rem;
+    border-radius: $border-radius-lg;
+    background-color: var(--#{$prefix}body-bg);
+    box-shadow: none;
+    transition: all .25s ease;
+
+    &.active {
+        background-color: var(--#{$prefix}tertiary-bg);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--#{$prefix}tertiary-bg);
+        }
+    }
+}
+
+// Card icon (Features cards) (within in landing page)
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    font-size: 24px;
+    background-color: var(--#{$prefix}border-color);
+    user-select: none;
+    
+}
+@include color-mode(dark) {
+    .card-icon {
+        background-color: var(--#{$prefix}gray-900);
+    }
+}
+
+// Card demo (within in landing page)
+.card-demo {
+    display: inline-block;
+    transition: transform .25s ease;
+
+    &:hover {
+        transform: translateY(-.5rem);
+    }
+}

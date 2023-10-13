@@ -1,0 +1,50 @@
+// 
+// Main style
+// 
+
+// 1. Include fonts
+@import "fonts/fonts";
+
+// 2. Include Bootstrap functions
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// 3. Include theme functions
+@import "theme-functions";
+
+// 4. Include user variables (overrides theme and Bootstrap variables)
+@import 'custom-variables';
+@import 'custom-variables-dark';
+
+// 5. Include theme variables (overrides Bootstrap variables)
+@import "variables";
+@import "variables-dark";
+
+// 6. Include Bootstrap variables
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// 7. Include theme map overrides
+@import "theme-maps";
+
+// 8. Include remainder of required Bootstrap parts
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+// 9. Include remainder of required theme parts
+@import "theme/mixins";
+@import "theme/utilities";
+@import "theme/helpers";
+@import "theme/reboot";
+
+// 10. Include Bootstrap components stack
+@import "bootstrap";
+
+// 11. Include theme components stack
+@import "theme/import";
+
+// 12. Include layout stack
+@import "layout/import";
+
+// 13. Include user SCSS code
+@import 'custom-code';

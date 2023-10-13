@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unior - AI Chat Bootstrap 5 HTML Template.</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Wrapper :: Start -->
+    <div class="wrapper bg-noise">
+        <!-- Navigation :: Start -->
+        <div class="navigation hide-scrollbar bg-noise py-4" data-bs-theme="dark">
+            <!-- Nav :: Start -->
+            <ul class="nav">
+                <!-- Toggle Compact Menu :: Start -->
+                <li class="nav-item position-relative mb-4">
+                    <a class="nav-link js-toggle-nav-compact" href="#" title="Toggle Compact">
+                        <i class="ri-side-bar-fill text-primary"></i>
+                        <span class="nav-link-title text-uppercase me-17">Unior</span>
+                    </a>
+                    <span class="nav-close"><i class="ri-close-circle-fill"></i></span>
+                </li>
+                <!-- Toggle Compact Menu :: End -->
+                <!-- Chats :: Start -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="chat-list.html" title="Chats">
+                        <i class="ri-chat-1-line text-info"></i>
+                        <span class="nav-link-title"><span>Chats</span></span>
+                    </a>
+                </li>
+                <!-- Chats :: End -->
+                <!-- Search :: Start -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal" title="Search">
+                        <i class="ri-search-eye-line text-success"></i>
+                        <span class="nav-link-title"><span>Search</span><span class="badge bg-secondary px-2 py-0 fs-14"><i class="ri-command-line"></i>F</span></span>
+                    </a>
+                </li>
+                <!-- Search :: End -->
+                <!-- Plans :: Start -->
+                <li class="nav-item">
+                    <a class="nav-link" href="plans.html" title="Manage Plans">
+                        <i class="ri-bank-card-line text-primary"></i>
+                        <span class="nav-link-title"><span>Manage Plans</span></span>
+                    </a>
+                </li>
+                <!-- Plans :: End -->
+                <!-- Updates & FAQ :: Start -->
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html" title="Updates & FAQ">
+                        <i class="ri-voice-recognition-line text-danger"></i>
+                        <span class="nav-link-title"><span>Updates &amp; FAQ</span></span>
+                    </a>
+                </li>
+                <!-- Updates & FAQ :: End -->
+                <!-- Settings :: Start -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal" title="Settings">
+                        <i class="ri-settings-line text-warning"></i>
+                        <span class="nav-link-title"><span>Settings</span><span class="badge bg-secondary px-2 py-0 fs-14"><i class="ri-command-line"></i>P</span></span>
+                    </a>
+                </li>
+                <!-- Settings :: End -->
+            </ul>
+            <!-- Nav :: End -->
+            <!-- Collapse :: Start -->
+            <ul class="nav">
+                <li class="nav-item mt-3 border-top py-1">
+                    <a class="nav-link" title="Chat List" data-bs-toggle="collapse" href="#collapseLabels" role="button" aria-expanded="false" aria-controls="collapseLabels">
+                        <i class="ri-list-check-2 text-info"></i>
+                        <span class="nav-link-title">
+                            <span>Chat List</span>
+                            <span class="text-body-secondary"><i class="ri-arrow-down-s-line"></i></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="collapse-wrapper">
+                <div class="collapse" id="collapseLabels">
+                    <ul class="nav">
+                        <!-- Welcome :: Start -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="chat-list.html" title="Welcome">
+                                <svg class="text-secondary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="8" fill="currentColor" fill-opacity="0.2" />
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                <span class="nav-link-title"><span>Welcome</span><span class="text-body-secondary fs-sm">5</span></span>
+                            </a>
+                        </li>
+                        <!-- Welcome :: End -->
+                        <!-- Favorites :: Start -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Favorites">
+                                <svg class="text-danger" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="8" fill="currentColor" fill-opacity="0.2" />
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                <span class="nav-link-title"><span>Favorites</span><span class="text-body-secondary fs-sm">21</span></span>
+                            </a>
+                        </li>
+                        <!-- Favorites :: End -->
+                        <!-- Archived :: Start -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Archived">
+                                <svg class="text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="8" fill="currentColor" fill-opacity="0.2" />
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                <span class="nav-link-title"><span>Archived</span><span class="text-body-secondary fs-sm">4</span></span>
+                            </a>
+                        </li>
+                        <!-- Archived :: End -->
+                        <!-- Add More :: Start -->
+                        <li class="nav-item mb-4">
+                            <a class="nav-link" href="#" title="Add More">
+                                <i class="ri-add-circle-fill text-body-secondary"></i>
+                                <span class="nav-link-title">Add More</span>
+                            </a>
+                        </li>
+                        <!-- Add More :: End -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Collapse :: End -->
+            <!-- Card :: Start -->
+            <div class="card card-upgrade bg-quaternary border-0 mx-3 mt-auto">
+                <div class="card-body p-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar avatar-sm">
+                                <img src="assets/img/avatars/user.png" alt="">
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="mb-0">realtheme</h6>
+                                <p class="text-body-secondary fs-12 mb-0">@realtheme</p>
+                            </div>
+                        </div>
+                        <div class="ms-2">
+                            <span class="badge bg-success fs-14">Free</span>
+                        </div>
+                    </div>
+                    <a href="plans.html" class="btn btn-sm btn-outline-primary w-100 text-white mt-3" role="button">View Plans</a>
+                </div>
+            </div>
+            <!-- Card :: End -->
+        </div>
+        <!-- Navigation :: End -->
+        <!-- Navigation Backdrop :: Start -->
+        <div class="nav-backdrop"></div>
+        <!-- Navigation Backdrop :: End -->
+        <!-- Main :: Start -->
+        <main class="main">
+            <!-- Main Inner :: Start -->
+            <div class="main-inner">
+                <!-- Main Toolbar :: Start -->
+                <div class="main-toolbar">
+                    <!-- Toolbar Left :: Start -->
+                    <div class="d-flex align-items-center overflow-hidden">
+                        <!-- Button :: Start -->
+                        <button class="d-xl-none js-navigation-show btn btn-icon btn-nav btn-sm me-2" type="button">
+                            <i class="ri-menu-2-fill"></i>
+                        </button>
+                        <!-- Button :: End -->
+                        <!-- Button :: Start -->
+                        <a class="btn btn-icon btn-sm me-2" href="chat-list.html" title="Back to the list" role="button">
+                            <i class="ri-apps-line"></i>
+                        </a>
+                        <!-- Button :: End -->
+                        <!-- Title :: Start -->
+                        <h3 class="h5 d-none d-sm-inline-block text-truncate mb-0 ms-sm-2">Welcome 👋</h3>
+                        <!-- Title :: End -->
+                    </div>
+                    <!-- Toolbar Left :: End -->
+                    <!-- Toolbar Right :: Start -->
+                    <div class="d-flex align-items-center">
+                        <!-- Button :: Start -->
+                        <button class="btn btn-icon btn-sm me-2" type="button" title="Notifications">
+                            <i class="ri-notification-2-line"></i>
+                        </button>
+                        <!-- Button :: End -->
+                        <!-- Sidebar Toggle :: Start -->
+                        <button class="btn btn-icon btn-sm js-toggle-sidebar" type="button" title="Toggle Sidebar">
+                            <i class="ri-layout-right-line"></i>
+                        </button>
+                        <!-- Sidebar Toggle :: End -->
+                        <!-- Avatar :: Start -->
+                        <div class="avatar avatar-sm mx-2">
+                            <img src="assets/img/avatars/user.png" alt="Avatar">
+                        </div>
+                        <!-- Avatar :: End -->
+                        <!-- Theme Switcher :: Start-->
+                        <div class="row align-items-center g-1 ms-1">
+                            <div class="col-auto">
+                                <div class="form-check form-switch form-switch-theme">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="switchTheme" title="Theme Switcher">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Theme Switcher :: End-->
+                    </div>
+                    <!-- Toolbar Right :: End -->
+                </div>
+                <!-- Main Toolbar :: End -->
+                <!-- Main Content :: Start -->
+                <div class="main-content">
+                    <!-- Main Body :: Start -->
+                    <div class="main-body">
+                        <!-- Chat :: Start -->
+                        <div class="chat" data-simplebar data-simplebar-auto-hide="true">
+                            <!-- Chat Content :: Start -->
+                            <div class="chat-content">
+                                <div class="p-4 p-sm-6">
+                                    <!-- Text Block :: Start -->
+                                    <div class="text-center mb-6">
+                                        <h3 class="mb-1">Welcome to Unior - your presonal digital assistant</h3>
+                                        <p class="fs-20 lead text-body-secondary">Unleash your creative potential with the power of AI.</p>
+                                    </div>
+                                    <!-- Text Block :: End -->
+                                    <!-- Cards :: Start -->
+                                    <div class="mx-auto" style="max-width: 512px;">
+                                        <!-- Card :: Start -->
+                                        <a class="d-block text-reset text-decoration-none mb-4" href="chat-code-generator.html">
+                                            <div class="card border-0 shadow-lg">
+                                                <div class="card-body p-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="bg-primary-subtle text-primary btn btn-icon me-3">
+                                                                <i class="ri-codepen-fill"></i>
+                                                            </div>
+                                                            <span class="fw-semibold">Code Generator</span>
+                                                        </div>
+                                                        <div class="btn btn-icon">
+                                                            <i class="ri-arrow-right-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- Card :: End -->
+                                        <!-- Card :: Start -->
+                                        <a class="d-block text-reset text-decoration-none mb-4" href="chat-photo-editing.html">
+                                            <div class="card border-0 shadow-lg">
+                                                <div class="card-body p-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="bg-info-subtle text-info btn btn-icon me-3">
+                                                                <i class="ri-image-edit-fill"></i>
+                                                            </div>
+                                                            <span class="fw-semibold">Photo Editing</span>
+                                                        </div>
+                                                        <div class="btn btn-icon">
+                                                            <i class="ri-arrow-right-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- Card :: End -->
+                                        <!-- Card :: Start -->
+                                        <a class="d-block text-reset text-decoration-none mb-4" href="chat-video-editing.html">
+                                            <div class="card border-0 shadow-lg">
+                                                <div class="card-body p-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="bg-danger-subtle text-danger btn btn-icon me-3">
+                                                                <i class="ri-movie-2-fill"></i>
+                                                            </div>
+                                                            <span class="fw-semibold">Video Editing</span>
+                                                        </div>
+                                                        <div class="btn btn-icon">
+                                                            <i class="ri-arrow-right-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- Card :: End -->
+                                        <!-- Card :: Start -->
+                                        <a class="d-block text-reset text-decoration-none mb-4" href="chat-educational-assistant.html">
+                                            <div class="card border-0 shadow-lg">
+                                                <div class="card-body p-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="bg-success-subtle text-success btn btn-icon me-3">
+                                                                <i class="ri-graduation-cap-fill"></i>
+                                                            </div>
+                                                            <span class="fw-semibold">Educational Assistant</span>
+                                                        </div>
+                                                        <div class="btn btn-icon">
+                                                            <i class="ri-arrow-right-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- Card :: End -->
+                                        <!-- Card :: Start -->
+                                        <a class="d-block text-reset text-decoration-none" href="chat-audio-generator.html">
+                                            <div class="card border-0 shadow-lg">
+                                                <div class="card-body p-2">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="bg-warning-subtle text-warning btn btn-icon me-3">
+                                                                <i class="ri-mic-line"></i>
+                                                            </div>
+                                                            <span class="fw-semibold">Audio Generator</span>
+                                                        </div>
+                                                        <div class="btn btn-icon">
+                                                            <i class="ri-arrow-right-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- Card :: End -->
+                                    </div>
+                                    <!-- Cards :: End -->
+                                    <!-- Button :: Start -->
+                                    <div class="d-flex align-items-center mt-6">
+                                        <a class="btn btn-primary mx-auto" href="#" role="button">Start Talking</a>
+                                    </div>
+                                    <!-- Button :: End -->
+                                </div>
+                            </div>
+                            <!-- Chat Content :: End -->
+                        </div>
+                        <!-- Chat :: End -->
+                    </div>
+                    <!-- Main Body :: Start -->
+                    <!-- Sidebar :: Start -->
+                    <aside class="sidebar bg-body-tertiary border-start overflow-hidden h-100">
+                        <!-- Sidebar Toolbar :: Start -->
+                        <div class="sidebar-toolbar bg-body-tertiary border-bottom flex-shrink-0 p-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <button class="btn btn-icon btn-nav btn-sm" type="button">
+                                        <i class="ri-delete-bin-5-line" title="Delete"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="mb-0 me-2">Chat history</p>
+                                    <span class="badge bg-quaternary">38/100</span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-icon btn-nav" type="button" title="Share">
+                                        <i class="ri-share-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sidebar Toolbar :: End -->
+                        <!-- Sidebar Content :: Start -->
+                        <div class="sidebar-content hide-scrollbar flex-grow-1 h-100 p-2">
+                            <!-- Card :: Start -->
+                            <div class="card-history active mb-4">
+                                <div class="row g-2">
+                                    <div class="col-auto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="cardChatHistory1" checked>
+                                        </div>
+                                    </div>
+                                    <div class="col overflow-hidden">
+                                        <a class="text-body" href="#">
+                                            <h6 class="card-history-title mb-1">Unior AI UI Kit</h6>
+                                        </a>
+                                        <p class="card-history-descr line-clamp mb-2">Write code (HTML, CSS and JS) for a simple landing page with hero banner and search input field.</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="avatar avatar-sm">
+                                                <img src="assets/img/avatars/user.png" alt="Avatar">
+                                            </div>
+                                            <small class="text-body-secondary">Just Now</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card :: End -->
+                            <!-- Card :: Start -->
+                            <div class="card-history mb-4">
+                                <div class="row g-2">
+                                    <div class="col-auto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="cardChatHistory2">
+                                        </div>
+                                    </div>
+                                    <div class="col overflow-hidden">
+                                        <a class="text-body" href="#">
+                                            <h6 class="card-history-title mb-1">Unior Landing Page</h6>
+                                        </a>
+                                        <p class="card-history-descr line-clamp mb-2">Write code (HTML, CSS and JS) for a simple landing page with hero banner and search input field.</p>
+                                        <a class="d-block mb-3" href="#">
+                                            <img src="assets/img/cards/card-history.png" class="img-fluid rounded-2" data-zoomable alt="Image">
+                                        </a>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="avatar avatar-sm">
+                                                <img src="assets/img/avatars/user.png" alt="Avatar">
+                                            </div>
+                                            <small class="text-body-secondary">Just Now</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card :: End -->
+                            <!-- Card :: Start -->
+                            <div class="card-history mb-4">
+                                <div class="row g-2">
+                                    <div class="col-auto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="cardChatHistory3">
+                                        </div>
+                                    </div>
+                                    <div class="col overflow-hidden">
+                                        <a class="text-body" href="#">
+                                            <h6 class="card-history-title mb-1">Photo Editing</h6>
+                                        </a>
+                                        <p class="card-history-descr line-clamp mb-2">Change background color of photo to light pink.</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="avatar-group">
+                                                <div class="avatar avatar-sm">
+                                                    <img src="assets/img/avatars/user.png" alt="Avatar">
+                                                </div>
+                                                <div class="avatar avatar-sm">
+                                                    <img src="assets/img/avatars/user-2.png" alt="Avatar">
+                                                </div>
+                                                <div class="avatar avatar-sm">
+                                                    <img src="assets/img/avatars/user-3.png" alt="Avatar">
+                                                </div>
+                                            </div>
+                                            <small class="text-body-secondary">Today</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card :: End -->
+                            <!-- Card :: Start -->
+                            <div class="card-history">
+                                <div class="row g-2">
+                                    <div class="col-auto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="cardChatHistory4">
+                                        </div>
+                                    </div>
+                                    <div class="col overflow-hidden">
+                                        <a class="text-body" href="#">
+                                            <h6 class="card-history-title mb-1">Write CTA Text</h6>
+                                        </a>
+                                        <p class="card-history-descr line-clamp mb-2">Write code (HTML, CSS and JS) for a simple landing page with hero banner and search input field.</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="avatar avatar-sm">
+                                                <img src="assets/img/avatars/user.png" alt="Avatar">
+                                            </div>
+                                            <small class="text-body-secondary">Today</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card :: End -->
+                        </div>
+                        <!-- Sidebar Content :: End -->
+                        <!-- Sidebar Footer :: Start -->
+                        <div class="sidebar-footer border-top text-center p-2">
+                            <button class="btn btn-sm btn-primary d-inline-flex align-items-center justify-content-center w-75"><i class="ri-add-line me-2"></i>New Chat</button>
+                        </div>
+                        <!-- Sidebar Footer :: End -->
+                    </aside>
+                    <!-- Sidebar :: End -->
+                </div>
+                <!-- Main Content :: End -->
+            </div>
+            <!-- Main Inner :: End -->
+        </main>
+        <!-- Main :: End -->
+    </div>
+    <!-- Wrapper :: End -->
+    <!-- Search Modal :: Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title h5" id="searchModalLabel">Quick Search</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form :: Start -->
+                    <div class="input-group input-group-lg mb-4">
+                        <span class="input-group-text" id="search-addon1">
+                            <i class="ri-search-eye-line text-secondary"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon1">
+                    </div>
+                    <!-- Form :: End -->
+                    <!-- Time :: Start -->
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <h3 class="h6 mb-0">Today</h3>
+                        <span class="small text-body-secondary">Fri 7 Apr</span>
+                    </div>
+                    <!-- Time :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">What is web development?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">Can you explain the difference between front-end and back-end web development?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">What are some popular web development languages?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">What are some best practices for optimizing website performance?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">What is responsive design?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">How can you improve the accessibility of a website for users with disabilities?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">What is a web server?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">What are some common security vulnerabilities in web development, and how can they be prevented?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                    <!-- Time :: Start -->
+                    <div class="d-flex align-items-center gap-3 mt-4 mb-4">
+                        <h3 class="h6 mb-0">Last 20 days</h3>
+                    </div>
+                    <!-- Time :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">How do you optimize a website's loading speed?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">What are some common security vulnerabilities in web development, and how can they be prevented?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                    <!-- Media :: Start -->
+                    <a href="#" class="text-reset text-decoration-none d-block mb-1">
+                        <div class="card card-search border-0">
+                            <div class="row align-items-center flex-nowrap g-4">
+                                <div class="col-auto">
+                                    <div class="avatar">
+                                        <img src="assets/img/avatars/user-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <h6 class="h-6 text-truncate mb-1">Can you explain the difference between HTTP and HTTPS protocols?</h6>
+                                    <span class="text-body-secondary text-truncate d-block fs-sm">How can you improve the user experience of a website or web application?</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="badge bg-body text-body">1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Media :: End -->
+                </div>
+                <div class="modal-footer p-1">
+                    <button type="button" class="btn btn-sm btn-quaternary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal :: End -->
+    <!-- Settings Modal :: Start -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title h5" id="settingsModalLabel">Settings</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-sm-6 pt-sm-4">
+                    <!-- Menu :: Start -->
+                    <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
+                        <!-- Menu Item :: Start -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">
+                                <i class="ri-profile-line fs-24"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Item :: End -->
+                        <!-- Menu Item :: Start -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill" id="pills-security-tab" data-bs-toggle="pill" data-bs-target="#pills-security" type="button" role="tab" aria-controls="pills-security" aria-selected="false">
+                                <i class="ri-lock-2-line fs-24"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Item :: End -->
+                        <!-- Menu Item :: Start -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill" id="pills-alerts-tab" data-bs-toggle="pill" data-bs-target="#pills-alerts" type="button" role="tab" aria-controls="pills-alerts" aria-selected="false">
+                                <i class="ri-notification-2-line fs-24"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Item :: End -->
+                        <!-- Menu Item :: Start -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill" id="pills-apps-tab" data-bs-toggle="pill" data-bs-target="#pills-apps" type="button" role="tab" aria-controls="pills-apps" aria-selected="false">
+                                <i class="ri-apps-line fs-24"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Item :: End -->
+                    </ul>
+                    <!-- Menu :: End -->
+                    <hr class="mb-4">
+                    <!-- Tabs :: Start -->
+                    <div class="tab-content">
+                        <!-- Tab Item :: Start -->
+                        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                            <h3 class="h4 mb-0">Edit Profile</h3>
+                            <hr class="mb-4">
+                            <h3 class="h6 mb-2">Avatar</h3>
+                            <div class="d-flex align-items-center gap-4 mb-4">
+                                <div class="avatar avatar-xl">
+                                    <img src="assets/img/avatars/user.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-column align-items-start gap-2">
+                                    <button type="button" class="btn btn-sm btn-outline-info">Upload Image</button>
+                                    <div>
+                                        <p class="text-body-secondary fs-sm mb-0">At least 512x512 px recommended.</p>
+                                        <p class="text-body-secondary fs-sm mb-0">PNG or JPG format is allowed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h6 mb-2">Username</h3>
+                            <div class="mb-4">
+                                <input type="email" class="form-control" placeholder="Your username...">
+                            </div>
+                            <h3 class="h6 mb-2">Location</h3>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="location-addon">
+                                    <i class="ri-map-pin-line"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Your address..." aria-label="Address" aria-describedby="location-addon">
+                            </div>
+                            <h3 class="h6 mb-2">Bio</h3>
+                            <div class="mb-0">
+                                <textarea class="form-control" placeholder="About me..." rows="3"></textarea>
+                            </div>
+                        </div>
+                        <!-- Tab Item :: End -->
+                        <!-- Tab Item :: Start -->
+                        <div class="tab-pane fade" id="pills-security" role="tabpanel" aria-labelledby="pills-security-tab" tabindex="0">
+                            <h3 class="h4 mb-0">Security</h3>
+                            <hr class="mb-4">
+                            <h3 class="h6 mb-2">Old password</h3>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="old-pass-addon">
+                                    <i class="ri-lock-password-line"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Password..." aria-label="Username" aria-describedby="old-pass-addon">
+                            </div>
+                            <h3 class="h6 mb-2">New password</h3>
+                            <div class="input-group mb-1">
+                                <span class="input-group-text" id="new-pass-addon">
+                                    <i class="ri-lock-password-line"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="New password..." aria-label="Username" aria-describedby="new-pass-addon">
+                            </div>
+                            <p class="text-body-secondary fs-sm">Minimum 8 characters</p>
+                            <h3 class="h6 mb-2">Confirm new password</h3>
+                            <div class="input-group mb-1">
+                                <span class="input-group-text" id="confirm-pass-addon">
+                                    <i class="ri-lock-password-line"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Confirm new password..." aria-label="Username" aria-describedby="confirm-pass-addon">
+                            </div>
+                            <p class="text-body-secondary fs-sm">Minimum 8 characters</p>
+                            <h3 class="h6 my-2">Manage account</h3>
+                            <button class="btn btn-sm btn-outline-danger mb-2">Delete account</button>
+                            <p class="text-body-secondary fs-sm mb-0">Warning: Deleting your account will permanently remove all of your data and cannot be undone. Are you sure you want to delete your account?</p>
+                        </div>
+                        <!-- Tab Item :: End -->
+                        <!-- Tab Item :: Start -->
+                        <div class="tab-pane fade" id="pills-alerts" role="tabpanel" aria-labelledby="pills-alerts-tab" tabindex="0">
+                            <div class="d-flex align-items-center">
+                                <h3 class="h4 mb-0 me-4">Notifications</h3>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="notificationsSwitch" checked>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <h3 class="h6 mb-3">Unior Platform</h3>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check1"> On new notifications </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check1" checked>
+                            </div>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check2"> Someone invite you in chat </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+                            </div>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check3"> Mentioned in chat </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check3" checked>
+                            </div>
+                            <h3 class="h6 my-3">Team Notifications</h3>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check4"> On new notifications </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check4">
+                            </div>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check5"> Someone invite you in chat </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check5">
+                            </div>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check6"> Mentioned in chat </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check6" checked>
+                            </div>
+                            <h3 class="h6 mt-3">From App</h3>
+                            <div class="form-check mb-1">
+                                <label class="form-check-label" for="check7"> Mentioned in chat </label>
+                                <input class="form-check-input" type="checkbox" value="" id="check7" checked>
+                            </div>
+                        </div>
+                        <!-- Tab Item :: End -->
+                        <!-- Tab Item :: Start -->
+                        <div class="tab-pane fade" id="pills-apps" role="tabpanel" aria-labelledby="pills-apps-tab" tabindex="0">
+                            <h3 class="h4 mb-0">Applications</h3>
+                            <hr class="mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <img src="assets/img/avatars/unior.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                                    <div class="me-4">
+                                        <h3 class="h6 mb-0">Unior</h3>
+                                        <span class="text-body-secondary fs-sm">Apr 2023</span>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-info">Deauthorize</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <img src="assets/img/avatars/midjourney.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                                    <div class="me-4">
+                                        <h3 class="h6 mb-0">Midjourney</h3>
+                                        <span class="text-body-secondary fs-sm">Apr 2023</span>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-info">Authorize</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <img src="assets/img/avatars/openai.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                                    <div class="me-4">
+                                        <h3 class="h6 mb-0">OpenAI</h3>
+                                        <span class="text-body-secondary fs-sm">Apr 2023</span>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-info">Authorize</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <img src="assets/img/avatars/discord.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                                    <div class="me-4">
+                                        <h3 class="h6 mb-0">Discord</h3>
+                                        <span class="text-body-secondary fs-sm">Apr 2023</span>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-info">Authorize</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <img src="assets/img/avatars/slack.png" alt="Avatar">
+                                </div>
+                                <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                                    <div class="me-4">
+                                        <h3 class="h6 mb-0">Slack</h3>
+                                        <span class="text-body-secondary fs-sm">Apr 2023</span>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-info">Authorize</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab Item :: End -->
+                    </div>
+                    <!-- Tabs :: End -->
+                </div>
+                <div class="modal-footer p-1">
+                    <button type="button" class="btn btn-sm btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-sm btn-quaternary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Settings Modal :: End -->
+    <!-- Scripts :: Start -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <!-- Scripts :: End -->
+</body>
+
+</html>

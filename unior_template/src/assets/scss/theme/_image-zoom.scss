@@ -1,0 +1,8 @@
+// 
+// Medium-zoom image plugin
+// 
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: $zindex-toast;
+}

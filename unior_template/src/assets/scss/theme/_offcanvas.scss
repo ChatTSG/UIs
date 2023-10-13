@@ -1,0 +1,13 @@
+// 
+// Offcanvas
+// 
+
+.offcanvas-body {
+    @include hide-scrollbar();
+}
+
+.offcanvas-footer {
+    display: flex;
+    flex-shrink: 0;
+    padding: $spacer;
+}

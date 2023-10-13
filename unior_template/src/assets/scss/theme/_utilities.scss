@@ -1,0 +1,79 @@
+// 
+//	Utilities
+// 
+
+$utilities: map-merge($utilities,(
+    // Extend font weight utilite
+    "font-weight": map-merge(
+        map-get($utilities, "font-weight"),
+        (
+        values: map-merge(
+            map-get(map-get($utilities, "font-weight"), "values"),
+                (medium: $font-weight-medium)
+            ),
+        ),
+    ),
+
+    // Extend width utilite
+    "width": (
+        responsive: true,
+        property: width,
+        class: w,
+        values: (
+              5: 5%,
+             10: 10%,
+             15: 15%,
+             20: 20%,
+             25: 25%,
+             30: 30%,
+             35: 35%,
+             40: 40%,
+             45: 45%,
+             50: 50%,
+             55: 55%,
+             60: 60%,
+             65: 65%,
+             70: 70%,
+             75: 75%,
+             80: 80%,
+             85: 85%,
+             90: 90%,
+             95: 95%,
+            100: 100%,
+            auto: auto
+        )
+    ),
+
+    // Extend height utilite
+    "height": (
+        responsive: true,
+        property: height,
+        class: h,
+        values: (
+             5:  5%,
+             10: 10%,
+             15: 15%,
+             20: 20%,
+             25: 25%,
+             30: 30%,
+             35: 35%,
+             40: 40%,
+             45: 45%,
+             50: 50%,
+             55: 55%,
+             60: 60%,
+             65: 65%,
+             70: 70%,
+             75: 75%,
+             80: 80%,
+             85: 85%,
+             90: 90%,
+             95: 95%,
+            100: 100%,
+            auto: auto
+        )
+    ),
+
+    // Reset font size utilities
+    "font-size": null
+));

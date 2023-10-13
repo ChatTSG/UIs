@@ -1,0 +1,31 @@
+// 
+// Layout
+// 
+
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+
+// App
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	overflow: hidden;
+    background-color: $quaternary-dark;
+}
+
+// Landing
+.landing {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	.page {
+		flex: 1 1 auto;
+	}
+}

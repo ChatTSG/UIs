@@ -1,0 +1,44 @@
+// 
+// Background
+// 
+
+// Noise background
+.bg-noise {
+    background-image: url("../../assets/img/backgrounds/noise.png");
+    background-size: 100px 100px;
+    background-position: center center;
+    background-repeat: repeat;
+}
+
+// Auth pages background
+.bg-auth {
+    background-image: url("../../assets/img/backgrounds/bg-auth.jpg");
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+// Landing banner background
+.banner-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.banner-gradient-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(-45deg, $primary 50%, $info 50%);
+    filter: blur(72px);
+    opacity: .75;
+    z-index: -1;
+}

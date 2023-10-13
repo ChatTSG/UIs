@@ -1,0 +1,149 @@
+// 
+// Navbar
+// 
+
+// Navbar sticky
+.navbar-sticky.navbar-stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: $box-shadow-lg;
+    animation: slide-down .25s;
+    z-index: $zindex-fixed;        
+}
+
+// Navbar transparent
+.navbar {
+    --#{$prefix}navbar-bg: #{$navbar-bg};
+    --#{$prefix}dropdown-column-width: #{$dropdown-column-width};
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .navbar {
+            --#{$prefix}navbar-bg: #{$navbar-bg-dark};
+        }
+    }
+}
+
+.navbar.transparent {
+    background-color: transparent;
+}
+
+.navbar-sticky {
+    &.navbar-stuck {
+        .navbar.transparent {
+            background-color: var(--#{$prefix}navbar-bg);
+        }
+    }
+}
+
+// Navbar expand loop
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+            @include media-breakpoint-down($next) {
+                .navbar-nav {
+                    .dropdown-menu {
+                        margin-top: 0;
+                        padding: 0;
+                        padding-left: $spacer * .5;
+                        padding-right: $spacer * .5;
+                        border: 0;
+                        border-left: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+                        border-radius: 0;
+                        background: none;
+                        box-shadow: none;    
+                    }
+
+                    .dropdown-column {
+                        min-width: 100%;
+                    }
+
+                    .dropdown-column:not(:last-child) {
+                        padding-bottom: $spacer * .5;
+                    }
+                
+                    .nav-link {
+                        padding-top: .5rem;
+                        padding-bottom: .5rem;
+                        padding-right: .125rem;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                
+                .navbar-collapse {
+                    align-items: stretch;
+                }                
+            }
+        }
+        &#{$infix} {
+            @include media-breakpoint-up($next) {
+                .navbar-nav {
+                    .dropdown-menu {
+                        position: absolute;
+                        
+                        &.show {
+                            display: none;
+                        }
+                        
+                        .dropdown-column:not(:last-child) {
+                            border-right: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+                        }
+                    }
+    
+                    .dropdown:hover > .dropdown-menu {
+                        display: block;
+                        animation: slide-down .25s ease-in-out;
+                    }
+                    
+                    .dropdown-column {
+                        min-width: var(--#{$prefix}dropdown-column-width);
+                        padding-left: $spacer * .5;
+                        padding-right: $spacer * .5;
+                    }
+
+                    .dropdown-column:first-child {
+                        padding-left: 0;
+                    }
+
+                    .dropdown-column:last-child {
+                        padding-right: 0;
+                    }
+                }
+
+                .navbar-sticky.navbar-stuck & .navbar-nav .dropdown > .dropdown-menu,
+                &:not(.transparent) .navbar-nav .dropdown > .dropdown-menu {
+                    margin-top: 1.5rem;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -1.7rem;
+                        left: -1rem;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        background-color: transparent;
+                        z-index: -1;
+                    }
+                }
+
+                .navbar-collapse {
+                    align-items: center;
+                    
+                    .nav-link {
+                        white-space: nowrap;
+                    }                    
+                }
+            }
+        }
+    }
+}

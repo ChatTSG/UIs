@@ -1,0 +1,72 @@
+// 
+// Buttons
+// 
+
+// White color for buttons 
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    --bs-btn-disabled-color: #fff;
+}
+
+// White color for outline buttons
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info {
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+
+// Button with icon only
+.btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(($line-height-base * $font-size-base) + ($btn-padding-y * 2) + ($btn-border-width * 2));
+    height: calc(($line-height-base * $font-size-base) + ($btn-padding-y * 2) + ($btn-border-width * 2));
+    font-size: 1.5rem; // 24px
+}
+
+.btn-icon.btn-sm {
+    width: calc(($line-height-base * $font-size-sm) + ($btn-padding-y-sm * 2) + ($btn-border-width * 2));
+    height: calc(($line-height-base * $font-size-sm) + ($btn-padding-y-sm * 2) + ($btn-border-width * 2));
+}
+
+.btn-icon.btn-lg {
+    width: calc(($line-height-base * $font-size-lg) + ($btn-padding-y-lg * 2) + ($btn-border-width * 2));
+    height: calc(($line-height-base * $font-size-lg) + ($btn-padding-y-lg * 2) + ($btn-border-width * 2));
+}
+
+// Button icon
+.btn-icon {
+    --#{$prefix}btn-border-color: transparent;
+    --#{$prefix}btn-border-width: #{$btn-border-width};
+    --#{$prefix}btn-hover-border-color: transparent;
+    --#{$prefix}btn-active-border-color: transparent;
+    --#{$prefix}btn-color: #{$navbar-btn-color};
+    --#{$prefix}btn-hover-color: #{$navbar-btn-hover-color};
+    --#{$prefix}btn-bg: transparent;
+}
+
+// Button nav
+.btn-nav {
+    --#{$prefix}btn-border-color: #{$navbar-btn-border-color};
+    --#{$prefix}btn-border-width: #{$btn-border-width};
+    --#{$prefix}btn-hover-border-color: #{$navbar-btn-hover-border-color};
+    --#{$prefix}btn-active-border-color: #{$navbar-btn-active-border-color};
+    --#{$prefix}btn-color: #{$navbar-btn-color};
+    --#{$prefix}btn-hover-color: #{$navbar-btn-hover-color};
+    --#{$prefix}btn-bg: transparent;
+}
+
+// Button close
+.btn-close {
+    transition: $transition-base;
+}

@@ -1,0 +1,22 @@
+// 
+// Simplebar (scrollbar plugin)
+// 
+
+// Fix simplebar conteiner width.
+// Github: https://github.com/Grsmto/simplebar/issues/253
+.simplebar-placeholder { width: auto!important; }
+
+// Track background color
+.simplebar-scrollbar::before {
+    background-color: $gray-500;
+}
+
+// Track timeout
+.simplebar-scrollbar:before {
+    transition-delay: 2.5s;
+}
+
+// Make the .message-footer stick to the bottom
+.chat .simplebar-content { 
+    height: 100%!important;
+}

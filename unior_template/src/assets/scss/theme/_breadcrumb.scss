@@ -1,0 +1,29 @@
+//
+// Breadcrumb
+// 
+
+.breadcrumb-item {
+    &::before {
+        font-family: 'remixicon';
+        font-size: 1em;
+        vertical-align: middle;
+    }
+
+    > a > i {
+        display: inline-block;
+        margin-top: -.125rem;  // -2px
+        margin-right: .25rem;  // 4px
+        font-size: 1.05em;
+        vertical-align: middle;
+    }
+
+    &.active {
+        cursor: default;
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    .breadcrumb-item {
+        font-size: $font-size-lg;
+    }
+}

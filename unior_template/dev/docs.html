@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unior - AI Chat Bootstrap 5 HTML Template.</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Landing :: Start -->
+    <div class="landing">
+        <!-- Page :: Start -->
+        <div class="page">
+            <!-- Navbar :: Start -->
+            <nav class="navbar navbar-expand-lg border-bottom bg-dark" data-bs-theme="dark">
+                <div class="container">
+                    <a class="navbar-brand h6 mb-0 text-uppercase" href="index.html">Unior</a>
+                    <div class="navbar-collapse offcanvas offcanvas-start offcanvas-nav" tabindex="-1" id="offcanvasNav">
+                        <div class="offcanvas-header d-lg-none">
+                            <h3 class="h1 text-uppercase mb-0">Unior</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column h-100">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#support">Support</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#changelog">Changelog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#credits">Credits</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-other d-flex">
+                        <ul class="navbar-nav flex-row align-items-center">
+                            <li class="nav-item">
+                                <div class="row align-items-center g-2">
+                                    <label for="switchTheme" class="col-auto col-form-label d-none d-sm-inline-block select-none" style="color: var(--bs-navbar-color);">Theme</label>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch form-switch-theme">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="switchTheme">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <a class="btn btn-icon btn-nav ms-2" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
+                                    <i class="ri-menu-2-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar :: End -->
+            <!-- Content :: Start -->
+            <div class="container py-4 py-sm-6">
+                <div class="row">
+                    <div class="col-lg-10 col-xxl-8 mx-auto">
+                        <h2>Introduction</h2>
+                        <p class="lead fs-5 mb-2">Hello, you are looking at documentation for Unior &ndash; HTML Bootstrap 5 AI Chat App Template. You will learn how to setup workspace, build and customize theme.</p>
+                        <p>Since this theme is based on Bootstrap, you should check the <a class="link-primary" href="https://getbootstrap.com/">official framework documentation</a> before continuing.</p>
+                        <hr class="my-8">
+                        <h3>Node.js</h3>
+                        <p>To be able to use the Gulp you need to download and install Node.js from the <a class="link-primary" href="https://nodejs.org/">official site.</a> The suggested version to install is <code>18.16.x LTS</code>.</p>
+                        <hr class="my-8">
+                        <h3>Gulpfile.js</h3>
+                        <p>Install Gulp Command Line Interface globally to use gulp in your terminal.</p>
+                        <div class="py-4">
+                            <pre class="language-bash">
+<code class="language-bash">npm install gulp-cli -g</code>
+</pre>
+                        </div>
+                        <hr class="my-8 bg-secondary">
+                        <h3>NPM modules</h3>
+                        <p>When you’re done, make sure you’ve installed the rest of the themes dependencies:</p>
+                        <div class="py-4">
+                            <pre class="language-bash">
+<code class="language-bash">npm install</code>
+</pre>
+                        </div>
+                        <hr class="my-8 bg-secondary">
+                        <h3>Gulp</h3>
+                        <p>Now, modify your <code>SCSS</code> and <code>HTML</code> source files and run <code>npm start</code> command in terminal for development or <code>npm run build</code> to build final production version of template. The <code>BrowserSync</code> plugin will open default browser and show result of editing. When you are done just hit <kbd>Ctrl + C</kbd> or close terminal to stop <code>BrowserSync</code> server.</p>
+                        <div class="py-4">
+                            <pre class="language-bash">
+<code class="language-bash">npm start</code>
+</pre>
+                            <pre class="language-bash">
+<code class="language-bash">npm run build</code>
+</pre>
+                        </div>
+                        <hr class="my-8">
+                        <h3>SCSS customizing</h3>
+                        <p>To ensure correct future updates you can edit three files:</p>
+                        <ul>
+                            <li>
+                                <code>_custom-variables.scss</code> <code>_custom-variables-dark.scss</code>: these files can be used to override Bootstrap and the template variables.
+                            </li>
+                            <li>
+                                <code>_custom-code.scss</code>: this file can be used for writing custom SCSS.
+                            </li>
+                        </ul>
+                        <hr class="my-8">
+                        <h3 id="support">Package Updating</h3>
+                        <p>Stay tuned for package updates on the TemplateMonster marketplace. If you wish to update the package yourself, follow these steps:</p>
+                        <ol>
+                            <li>Update Node.js to actual version.</li>
+                            <li>Manually correct every dependencies version number in package.json file to actual version.</li>
+                            <li>From console run "npm install" command to update dependencies.</li>
+                            <li>If you also update Bootstrap dependencie solve possible errors in theme SCSS code related to Bootstrap.</li>
+                        </ol>
+                        <hr class="my-8">
+                        <h3 id="support">Support</h3>
+                        <p>Support is provided according to TemplateMonster marketplace rules.</p>
+                        <hr class="my-8">
+                        <h3 id="changelog">Changelog</h3>
+                        <p>v1.1.0 - Bootstrap updated to final version 5.3.0.</p>
+                        <hr class="my-8">
+                        <h3 id="credits">Credits</h3>
+                        <p class="mb-2">Attribute the image to its author as required by the license agreement:</p>
+                        <div class="d-flex flex-column">
+                            <span><a href="https://www.freepik.com/free-photo/portrait-young-handsome-man-standing-with-crossed-arms-with-isolated-studio-yellow-background_26727713.htm">Image by jcomp</a> on Freepik</span>
+                            <span><a href="https://www.freepik.com/free-photo/handsome-smiling-adult-man-casual-outfit-smiling-looking-left-promo-offer-standing-against-blue-background_18147443.htm">Image by benzoix</a> on Freepik</span>
+                            <span><a href="https://www.freepik.com/free-photo/smiling-young-brunette-caucasian-girl-points-side-looks-camera-isolated-olive-green-background-with-copy-space_13381099.htm">Image by stockking</a> on Freepik</span>
+                            <span><a href="https://www.freepik.com/free-vector/chat-bot-mobile-chatting-isometric-concept_6342161.htm">Image by upklyak</a> on Freepik</span>
+                            <span>Image by <a href="https://www.pexels.com/ru-ru/photo/7135037/">Codioful (formerly Gradienta)</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-photo/gradient-pink-diamond-balls-arrangement_33137489.htm">Freepik</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-psd/3d-illustration-person-with-pink-hair_27470338.htm">Freepik</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-psd/3d-illustration-person-with-sunglasses_27470334.htm">Freepik</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-vector/dynamic-gradient-grainy-texture_15292717.htm">Freepik</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-vector/gradient-grainy-gradient-background_33796737.htm">Freepik</a></span>
+                            <span>Image by <a href="https://www.freepik.com/free-vector/gradient-grainy-gradient-background_33796740.htm">Freepik</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content :: End -->
+        </div>
+        <!-- Page :: End -->
+        <!-- Footer :: Start -->
+        <footer class="footer py-4 border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="text-body-secondary fs-18 mb-0">2023 <i class="ri-copyright-line"></i> Unior. Created by realtheme</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer :: End -->
+    </div>
+    <!-- Landing :: End -->
+    <!-- Scripts :: Start -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <!-- Scripts :: End -->
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+// 
+// Reboot
+// 
+
+// Selection color & background
+::selection {
+    color: $white;
+    background: rgba($primary, 60%);
+}
+
+// Links transition
+a {
+    transition: color .25s ease, transform .25s ease;
+}
+
+// Remixicon icon library
+[class^="ri-"], [class*=" ri-"] {
+    line-height: $line-height-base;
+}

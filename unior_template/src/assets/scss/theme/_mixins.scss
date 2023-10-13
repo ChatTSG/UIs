@@ -1,0 +1,84 @@
+// 
+// Mixins
+// 
+
+// Caret mixins
+@mixin caret-down-custom {
+    content: $caret-icon-down;
+}
+
+@mixin caret-up-custom {
+    content: $caret-icon-up;
+}
+
+@mixin caret-end-custom {
+    content: $caret-icon-end;    
+}
+
+@mixin caret-start-custom {
+    content: $caret-icon-start;
+}
+
+@mixin caret-custom($direction: down) {
+    &::after {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "remixicon";
+        font-weight: $font-weight-normal;
+        font-size: 1.5rem;
+        width: $caret-icon-width;
+        height: $caret-icon-height;
+        margin-left: $caret-spacing;
+        color: inherit;
+
+        @if $direction==down {
+            @include caret-down-custom();
+        }
+
+        @else if $direction==up {
+            @include caret-up-custom();
+        }
+
+        @else if $direction==end {
+            @include caret-end-custom();
+        }
+    }
+
+    @if $direction==start {
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "remixicon";
+            font-size: 1.25rem;
+            width: $caret-icon-width;
+            height: $caret-icon-height;
+            margin-right: $caret-spacing;
+            color: inherit;
+
+            @include caret-start-custom();
+        }
+    }
+
+    &:empty::after {
+        margin-left: 0;
+    }
+}
+
+// Hide scrollbar mixin
+@mixin hide-scrollbar() {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: auto;
+    }
+}

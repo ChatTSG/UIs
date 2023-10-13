@@ -1,0 +1,90 @@
+// 
+// Dropdowns
+// 
+
+// Dropdown menu
+.dropdown-menu {
+    // Dropdown variables
+    --#{$prefix}dropdown-link-hover-border-width: #{$dropdown-link-hover-border-width};
+    --#{$prefix}dropdown-link-hover-border-color: #{$dropdown-link-hover-border-color};
+    --#{$prefix}dropdown-link-hover-border-radius: #{$dropdown-link-hover-border-radius};
+    --#{$prefix}dropdown-divider-bg-dark: #{$dropdown-divider-bg-dark};
+
+    box-shadow: var(--#{$prefix}dropdown-box-shadow);
+}
+
+// Dropdown item
+.dropdown-item {
+    font-weight: $dropdown-font-weight;
+    border: var(--#{$prefix}dropdown-link-hover-border-width) solid transparent;
+    border-radius: var(--#{$prefix}dropdown-link-hover-border-radius);
+
+    &:hover {
+        border: var(--#{$prefix}dropdown-link-hover-border-width) solid var(--#{$prefix}dropdown-link-hover-border-color);
+    }
+}
+
+// Divider `<hr>` within the dropdown
+.dropdown-divider {
+    border-width: $border-width;
+}
+
+@include color-mode(dark) {
+    .dropdown-divider {
+        border-color: var(--#{$prefix}dropdown-divider-bg-dark);
+        opacity: 1;
+    }
+}
+
+// Dropdown toggle
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    // Generate custom caret
+    @include caret-custom();
+}
+
+.dropup {
+    .dropdown-toggle {
+        @include caret-custom(up);
+    }
+}
+
+.dropend {
+    .dropdown-toggle {
+        @include caret-custom(end);
+    }
+}
+
+.dropstart {
+    .dropdown-toggle {
+        @include caret-custom(start);
+    }
+}
+
+// Split button dropdowns
+.dropdown-toggle-split {
+    &::after,
+    .dropup &::after,
+    .dropend &::after {
+        margin-left: 0;
+    }
+
+    .dropstart &::before {
+        margin-right: 0;
+    }
+}
+
+// Dropdown animation
+@keyframes slide-down {
+    from {
+        transform: translateY(-.5rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

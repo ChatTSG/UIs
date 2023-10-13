@@ -1,0 +1,12 @@
+// 
+// Plyr video player plugin
+// 
+
+:root {
+    --plyr-color-main: #a259ff;
+    --plyr-audio-controls-background: rgba(255,255,255, .02);
+}
+
+[data-bs-theme="dark"] {
+    --plyr-audio-control-color: var(--#{$prefix}body-color);
+}

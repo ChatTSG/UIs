@@ -1,0 +1,10 @@
+// 
+// Horizontal rule
+// 
+
+@include color-mode(dark) {
+    hr {
+        color: $gray-500;
+        opacity: .15;
+    }
+}
